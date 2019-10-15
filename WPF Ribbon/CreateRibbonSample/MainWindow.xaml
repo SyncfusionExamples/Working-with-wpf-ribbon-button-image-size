@@ -1,0 +1,54 @@
+﻿<syncfusion:RibbonWindow x:Class="CreateRibbonSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreateRibbonSample"  syncfusion:SkinStorage.VisualStyle="Office2013" 
+        mc:Ignorable="d" xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                         xmlns:skin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                         skin:SfSkinManager.VisualStyle="Office2016Colorful"
+        Title="Ribbon" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <syncfusion:Ribbon VerticalAlignment="Top" syncfusion:Ribbon.IsAutoSizeFormEnabled="True">
+            <syncfusion:RibbonTab Caption="HOME"  IsChecked="True">
+                <syncfusion:RibbonBar Name="New" Header="New" CollapseImage="Resources\Mail-16.png">
+                    <syncfusion:RibbonButton SizeForm="Large" Label="New Email" IconStretch="Uniform" LargeIcon="Resources\Mail-16.png" SmallIcon="Resources\Mail-16.png"/>
+                    <syncfusion:DropDownButton SizeForm="Large" Label="New Items" LargeIcon="Resources/Mail Add-WF.png" SmallIcon="Resources/Mail Add-WF.png">
+                        <syncfusion:DropDownMenuItem Header="E-mail Message"/>
+                        <syncfusion:DropDownMenuItem Header="Appointment"/>
+                        <syncfusion:DropDownMenuItem Header="Meeting"/>
+                        <syncfusion:DropDownMenuItem Header="Contact"/>
+                        <syncfusion:DropDownMenuItem Header="Task"/>
+                    </syncfusion:DropDownButton>
+                </syncfusion:RibbonBar>
+                <syncfusion:RibbonBar Name="Delete" Header="Delete" CollapseImage="Resources/Mail Delete-WF.png">
+                    <syncfusion:RibbonButton Label="Ignore" SmallIcon="Resources\Mail-16.png" IconStretch="Fill"/>
+                    <syncfusion:SplitButton Label="Clean Up" SmallIcon="Resources/Mail Delete-WF.png" >
+                        <syncfusion:DropDownMenuItem Header="Clean Up Folder"/>
+                        <syncfusion:DropDownMenuItem Header="Clean Up Conversation"/>
+                        <syncfusion:DropDownMenuItem Header="Clean Up Folder/SubFolder"/>
+                    </syncfusion:SplitButton>
+                    <syncfusion:SplitButton HorizontalAlignment="Left" Label="Junk" SmallIcon="Resources/Mail Remove-WF.png">
+                        <syncfusion:DropDownMenuItem Header="Block sender"/>
+                        <syncfusion:DropDownMenuItem Header="Never block sender"/>
+                    </syncfusion:SplitButton>
+                    <syncfusion:RibbonButton Label="Delete" SizeForm="Large" LargeIcon="Resources/Garbage-WF.png" SmallIcon="Resources/Garbage-WF.png" />
+                    <syncfusion:RibbonButton Label="Archive" SizeForm="Large" LargeIcon="Resources/Archive02-WF.png" SmallIcon="Resources/Archive02-WF.png"/>
+                </syncfusion:RibbonBar>
+                <syncfusion:RibbonBar Header="Basic Text" CollapseImage="Resources/AlignJustify-WF.png">
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/Bold.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/Text-Italic.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/Text Decoration-05.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/AlignCenter-WF.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/AlignLeft-WF.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/AlignRight-WF.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/AlignJustify-WF.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/Bullets-02-WF.png"/>
+                    <syncfusion:RibbonButton SizeForm="ExtraSmall" SmallIcon="Resources/Bullets-01-WF.png"/>
+                </syncfusion:RibbonBar>
+
+            </syncfusion:RibbonTab>
+            <syncfusion:RibbonTab Background="Transparent" Caption="Insert" FocusVisualStyle="{x:Null}" Focusable="False" MinWidth="23"/>
+        </syncfusion:Ribbon>
+    </Grid>
+</syncfusion:RibbonWindow>
